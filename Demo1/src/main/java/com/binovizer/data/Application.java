@@ -25,6 +25,7 @@ public class Application {
 		
 		session.save(nad);
 		//session.getTransaction().commit();
+		session.close();
 		sf.close();
 	}
 }
