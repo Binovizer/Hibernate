@@ -25,11 +25,13 @@ public class Application {
 		
 		session.save(nad);
 		session.getTransaction().commit();
+		/*
 		session.beginTransaction();
 		User dbUser = (User) session.get(User.class, nad.getUserId());
 		dbUser.setLastName("Ayan");
 		session.update(dbUser);
-		session.getTransaction().commit();
+		session.getTransaction().commit();*/
+		
 		session.close();
 		sf.close();
 	}

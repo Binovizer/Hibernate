@@ -5,16 +5,16 @@ import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Entity
 @Table(name="finances_user")
 public class User {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue
 	@Column(name="USER_ID")
 	private Long userId;
 
@@ -24,7 +24,7 @@ public class User {
 	@Column(name="LAST_NAME")
 	private String lastName;
 
-	@Column(name="BIRTH_DATE")
+	@Column(name="BIRTH_DATE",nullable=false)
 	private Date birthDate;
 
 	@Column(name="EMAIL_ADDRESS")
@@ -41,6 +41,17 @@ public class User {
 
 	@Column(name="CREATED_BY",updatable=false)
 	private String createdBy;
+
+	@Transient
+	private boolean valid;
+	
+	public boolean isValid() {
+		return valid;
+	}
+
+	public void setValid(boolean valid) {
+		this.valid = valid;
+	}
 
 	public Long getUserId() {
 		return userId;

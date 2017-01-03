@@ -22,6 +22,8 @@
 
 		<property name="format_sql">true</property>
 		
+		<property name="hibernate.id.new_generator_mappings">false</property>
+		
         <mapping class="com.binovizer.data.entities.User"/>
 
     </session-factory>
