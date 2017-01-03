@@ -15,15 +15,16 @@ public class Application {
 		
 		User nad = new User();
 		nad.setFirstName("Mohd");
-		nad.setLastName("Nadeem");
+		nad.setLastName("Aayan");
 		nad.setBirthDate(new Date());
-		nad.setEmailAddress("mohd.nadeem3464@gmail.com");
+		nad.setEmailAddress("mohd.aayan3464@gmail.com");
 		nad.setLastUpdatedBy("Mohd Nadeem");
 		nad.setLastUpdatedDate(new Date());
 		nad.setCreatedBy("Mohd Nadeem");
 		nad.setCreatedDate(new Date());
 		
 		session.save(nad);
+		//session.getTransaction().commit();
 		sf.close();
 	}
 }
