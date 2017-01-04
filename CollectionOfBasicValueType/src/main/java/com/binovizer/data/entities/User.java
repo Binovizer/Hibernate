@@ -10,8 +10,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 
 @Entity
@@ -34,21 +32,18 @@ public class User {
 	@Column(name = "LAST_NAME")
 	private String lastName;
 
-	@Temporal(TemporalType.DATE)
 	@Column(name = "BIRTH_DATE", nullable = false)
 	private Date birthDate;
 
 	@Column(name = "EMAIL_ADDRESS")
 	private String emailAddress;
 
-	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name = "LAST_UPDATED_DATE")
 	private Date lastUpdatedDate;
 
 	@Column(name = "LAST_UPDATED_BY")
 	private String lastUpdatedBy;
 
-	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name = "CREATED_DATE", updatable = false)
 	private Date createdDate;
 
