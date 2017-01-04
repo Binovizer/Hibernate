@@ -25,6 +25,7 @@
 		<property name="hibernate.id.new_generator_mappings">false</property>
 		
         <mapping class="com.binovizer.data.entities.User"/>
+        <mapping class="com.binovizer.data.entities.TimeTest"/>
 
     </session-factory>
 
