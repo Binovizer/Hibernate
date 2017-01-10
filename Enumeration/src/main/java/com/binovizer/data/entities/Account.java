@@ -33,7 +33,7 @@ public class Account {
 
 	@ManyToMany(cascade = CascadeType.ALL)
 	@JoinTable(name = "USER_ACCOUNT", joinColumns = @JoinColumn(name = "ACCOUNT_ID"), inverseJoinColumns = @JoinColumn(name = "USER_ID"))
-	private Set<User> users = new HashSet<User>();
+	private Set<User> users = new HashSet<>();
 
 	@ManyToOne
 	@JoinColumn(name = "BANK_ID")
@@ -44,7 +44,7 @@ public class Account {
 	private AccountType accountType;
 
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "account")
-	List<Transaction> transactions = new ArrayList<Transaction>();
+	List<Transaction> transactions = new ArrayList<>();
 
 	@Column(name = "NAME")
 	private String name;
